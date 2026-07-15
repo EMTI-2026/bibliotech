@@ -1,0 +1,28 @@
+# --- PHP & Composer ---
+vendor/
+.phpunit.result.cache
+composer.lock
+
+# --- Ambiente / Configurações Sensíveis ---
+# Ignorar arquivos onde os alunos possam salvar senhas de banco de dados locais
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Banco de Dados Local ---
+# Impede que os alunos enviem arquivos de banco de dados temporários ou dumps pesados
+*.db
+*.sqlite
+*.sql.gz
+# NOTA: O arquivo "database/schema.sql" NÃO será ignorado pois está explicitamente na estrutura,
+# mas dumps soltos ou backups locais na raiz serão bloqueados por esta regra.
+
+# --- Editores de Código e IDEs ---
+.vscode/
+.idea/
+
+# --- Sistema Operacional ---
+.DS_Store
+Thumbs.db
